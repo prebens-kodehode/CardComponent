@@ -10,7 +10,7 @@
 body {
   margin: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,17 +24,23 @@ h1 {
   font-family: "Big Shoulders Display", cursive;
   text-transform: uppercase;
   color: var(--heading-color);
+  font-size: 2.3rem;
+}
+
+img {
+  width: 4rem;
 }
 
 button {
   width: 10rem;
   height: 3rem;
   background: var(--heading-color);
-  border: var(--heading-color);
+  border: 0.15rem solid var(--heading-color);
   border-radius: 2rem;
   padding: 1rem 1.5rem;
   font-family: "Lexend Deca", sans-serif;
   line-height: 0.5rem;
+  cursor: pointer;
 }
 
 section {
@@ -42,7 +48,7 @@ section {
   flex-direction: column;
   justify-content: space-between;
   width: 15rem;
-  height: 100%;
+  height: 25rem;
   padding: 3rem;
 }
 
@@ -50,7 +56,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 3rem;
+  margin: 1rem;
 }
 
 .sedan {
@@ -71,15 +77,30 @@ section {
   color: var(--primary-color-sedan);
 }
 
+.sedan button:active {
+  background: var(--primary-color-sedan);
+  color: var(--heading-color);
+}
+
 .suv button {
   color: var(--primary-color-suv);
+}
+
+.suv button:active {
+  background: var(--primary-color-suv);
+  color: var(--heading-color);
 }
 
 .luxury button {
   color: var(--primary-color-luxury);
 }
 
-@media (max-width: 375px) {
+.luxury button:active {
+  background: var(--primary-color-luxury);
+  color: var(--heading-color);
+}
+
+@media (max-width: 500px) {
   .wrapper {
     flex-direction: column;
   }
